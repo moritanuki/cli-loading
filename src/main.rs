@@ -1,10 +1,10 @@
 use chrono::prelude::*;
 
 fn main () {
-    let loading_markers = vec!["|", "/", "-", "\\"];
+    let loading_markers = vec!["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"];
     let mut progress = String::from("====================");  // 100%状態の文字
   
-    let endtime = Local.datetime_from_str("2023-01-12 08:32:00", "%Y-%m-%d %H:%M:%S")
+    let endtime = Local.datetime_from_str("2023-01-12 08:50:00", "%Y-%m-%d %H:%M:%S")
       .unwrap()
       .timestamp_millis();
     let range = endtime - Local::now().timestamp_millis();
